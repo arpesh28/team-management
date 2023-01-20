@@ -74,33 +74,70 @@ export default function Homepage() {
                   <TeamCard
                     title="Project Manager"
                     members={teams["project-manager"]}
+                    allMembers={allMembers}
+                    teams={teams}
+                    setTeams={setTeams}
+                    setMembers={setMembers}
                   />
                 </div>
                 <div className="col-12 col-lg-6">
                   <TeamCard
                     title="UI/UX Designer"
                     members={teams["ui-ux-designer"]}
+                    teams={teams}
+                    allMembers={allMembers}
+                    setTeams={setTeams}
+                    setMembers={setMembers}
                   />
                 </div>
                 <div className="col-12 col-lg-6">
                   <TeamCard
                     title="Front End Developers"
                     members={teams["frontend-dev"]}
+                    teams={teams}
+                    setTeams={setTeams}
+                    allMembers={allMembers}
+                    setMembers={setMembers}
                   />
                 </div>
                 <div className="col-12 col-lg-6">
                   <TeamCard
                     title="Back End Developers"
                     members={teams["backend-dev"]}
+                    teams={teams}
+                    setTeams={setTeams}
+                    allMembers={allMembers}
+                    setMembers={setMembers}
                   />
                 </div>
                 <div className="col-12 col-lg-6">
-                  <TeamCard title="QA/Tester" members={teams["qa-tester"]} />
+                  <TeamCard
+                    title="QA/Tester"
+                    members={teams["qa-tester"]}
+                    teams={teams}
+                    setTeams={setTeams}
+                    allMembers={allMembers}
+                    setMembers={setMembers}
+                  />
                 </div>
                 <div className="col-12 col-lg-6">
                   <TeamCard
                     title="Mobile Developers"
                     members={teams["mobile-dev"]}
+                    teams={teams}
+                    allMembers={allMembers}
+                    setTeams={setTeams}
+                    setMembers={setMembers}
+                  />
+                </div>{" "}
+                <div className="col-12 col-lg-6">
+                  <TeamCard
+                    title="Devops"
+                    members={teams["devops"]}
+                    teams={teams}
+                    allMembers={allMembers}
+                    setTeams={setTeams}
+                    setMembers={setMembers}
                   />
                 </div>
               </div>{" "}

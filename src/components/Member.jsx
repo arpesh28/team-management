@@ -4,7 +4,14 @@ import { Button, Dropdown } from "react-bootstrap";
 import profileIcon from "../include/images/dp1.jpeg";
 import moreIcon from "../include/images/more.png";
 
-export default function Member({ member, type, setMembers, setTeams }) {
+export default function Member({
+  member,
+  type,
+  setMembers,
+  setTeams,
+  removeSetTeam,
+  removeSetMembers,
+}) {
   const addMember = (e) => {
     const list = localStorage.getItem("teams");
     const oldCategory = JSON.parse(list)
@@ -26,6 +33,28 @@ export default function Member({ member, type, setMembers, setTeams }) {
       localStorage.setItem(
         "teams",
         JSON.stringify({ [member.category]: [...categoryList, member] })
+      );
+    }
+  };
+
+  const removeMember = (e) => {
+    const list = localStorage.getItem("teams");
+    const oldCategory = JSON.parse(list)
+      ? JSON.parse(list)[member.category]
+      : [];
+    const categoryList =
+      oldCategory && oldCategory.length > 0 ? oldCategory : [];
+    removeSetTeam();
+    removeSetMembers();
+    if (list) {
+      localStorage.setItem(
+        "teams",
+        JSON.stringify({
+          ...JSON.parse(list),
+          [member.category]: categoryList.filter(
+            (mem) => mem.userId !== member.userId
+          ),
+        })
       );
     }
   };
@@ -52,7 +81,9 @@ export default function Member({ member, type, setMembers, setTeams }) {
             <Dropdown.Menu>
               <Dropdown.Item href="#">Lead</Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#">Remove</Dropdown.Item>
+              <Dropdown.Item href="#" onClick={removeMember}>
+                Remove
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         ) : (
