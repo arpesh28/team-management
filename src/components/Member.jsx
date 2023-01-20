@@ -14,6 +14,7 @@ export default function Member({
 }) {
   const addMember = (e) => {
     const list = localStorage.getItem("teams");
+    const members = JSON.parse(localStorage.getItem("all-members"));
     const oldCategory = JSON.parse(list)
       ? JSON.parse(list)[member.category]
       : [];
@@ -35,6 +36,10 @@ export default function Member({
         JSON.stringify({ [member.category]: [...categoryList, member] })
       );
     }
+    localStorage.setItem(
+      "all-members",
+      JSON.stringify(members.filter((mem) => mem.userId !== member.userId))
+    );
   };
 
   const removeMember = (e) => {
