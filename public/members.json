@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "userId": 1,
+      "category": "backend-dev",
+      "firstName": "Romin",
+      "lastName": "Irani",
+      "experience": 3,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 2,
+      "category": "frontend-dev",
+      "firstName": "Neil",
+      "lastName": "Irani",
+      "experience": 2,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 3,
+      "category": "devops",
+      "firstName": "Tom",
+      "lastName": "Hanks",
+      "experience": 9,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 4,
+      "category": "devops",
+      "firstName": "John Terry",
+      "lastName": "Hanks",
+      "experience": 12,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 5,
+      "category": "mobile-dev",
+      "firstName": "Robertson",
+      "lastName": "",
+      "experience": 3,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 6,
+      "category": "qa-tester",
+      "firstName": "Maria",
+      "lastName": "",
+      "experience": 2,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 7,
+      "category": "project-manager",
+      "firstName": "Alexander",
+      "lastName": "",
+      "experience": 1,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 8,
+      "category": "ui-ux-designer",
+      "firstName": "Serina",
+      "lastName": "",
+      "experience": 5,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 9,
+      "category": "frontend-dev",
+      "firstName": "Frank",
+      "lastName": "",
+      "experience": 4,
+      "image": "../include/images/dp1.jpeg"
+    },
+    {
+      "userId": 10,
+      "category": "backend-dev",
+      "firstName": "Samuel",
+      "lastName": "",
+      "experience": 3,
+      "image": "../include/images/dp1.jpeg"
+    }
+  ]
+}
